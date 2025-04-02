@@ -4,6 +4,7 @@
 -- 1 
 --  A 
 CREATE TABLE customer (
+    customer_id INT AUTO_INCREMENT,
 	email VARCHAR(100),
     `name` VARCHAR(255) NOT NULL,
     PRIMARY KEY(email)    
