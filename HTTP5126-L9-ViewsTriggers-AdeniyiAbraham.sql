@@ -76,7 +76,7 @@ AFTER UPDATE ON stock_item
 FOR EACH ROW
 BEGIN
 	INSERT INTO stock_item_log (action, stock_item_id, old_name, old_price, old_inventory, old_category, timestamp)
-	VALUES ('UPDATE', OLD.stock_item_id, OLD.name, Old.price, OLD.inventory, OLD.category, NOW());
+	VALUES ('UPDATE', OLD.stock_item_id, OLD.name, OLD.price, OLD.inventory, OLD.category, NOW());
 END//
 DELIMITER ;
 -- C 
@@ -86,7 +86,7 @@ AFTER DELETE ON stock_item
 FOR EACH ROW
 BEGIN
 	INSERT INTO stock_item_log (action, stock_item_id, old_name, old_price, old_inventory, old_category, timestamp)
-	VALUES ('DELETE', OLD.stock_item_id, OLD.name, Old.price, OLD.inventory, OLD.category, NOW());
+	VALUES ('DELETE', OLD.stock_item_id, OLD.name, OLD.price, OLD.inventory, OLD.category, NOW());
 END//
 DELIMITER ;
 
